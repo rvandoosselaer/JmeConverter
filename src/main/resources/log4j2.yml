@@ -1,0 +1,15 @@
+Configuration:
+  appenders:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: "%d %-5p [%t] %C:%L - %m%n"
+
+  Loggers:
+    logger:
+      - name: org.randomstack
+        level: all
+    Root:
+      level: warn
+      AppenderRef:
+        - ref: STDOUT
