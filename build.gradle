@@ -16,6 +16,7 @@ ext {
     log4j2Version = "[2.11,)"
     jacksonVersion = "[2.9,)"
     jme3UtilsVersion = "[0.1,)"
+    groovyVersion = "[2.4,)"
 }
 
 repositories {
@@ -37,6 +38,9 @@ dependencies {
     // utilities
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    // groovy for runtime scripting
+    runtime "org.codehaus.groovy:groovy-all:${groovyVersion}"
 
     // logging
     implementation "org.slf4j:slf4j-api:${slf4jVersion}"

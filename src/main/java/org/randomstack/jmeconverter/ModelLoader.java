@@ -20,10 +20,13 @@ public class ModelLoader {
 
     private static final String DESKTOP_CFG = "/com/jme3/asset/Desktop.cfg";
 
-    public Model load(Path modelPath) {
-        // create a new AssetManager for each model we load. If not we need to keep track of all the locators we add
-        AssetManager assetManager = new DesktopAssetManager(getClass().getResource(DESKTOP_CFG));
+    private final AssetManager assetManager;
 
+    public ModelLoader() {
+        this.assetManager = new DesktopAssetManager(getClass().getResource(DESKTOP_CFG));
+    }
+
+    public Model load(Path modelPath) {
         log.info("Loading {}", modelPath);
         // validate the model path
         validatePath(modelPath);
@@ -37,6 +40,10 @@ public class ModelLoader {
         String fileName = modelPath.getFileName().toString();
         Spatial spatial = assetManager.loadModel(fileName);
         log.debug("Loaded {}", fileName);
+
+        // after the model is loaded we unregister the FileLocator
+        assetManager.unregisterLocator(parentDir, FileLocator.class);
+        log.debug("Unregistered FileLocator[{}] from the asset manager.", parentDir);
 
         return new Model(modelPath, spatial);
     }
