@@ -8,4 +8,17 @@ You can actively contribute to the RandomStack projects by **reporting bugs** or
 See [this](https://help.github.com/en/articles/creating-an-issue) guide for more information.
 
 If you are feeling courageous you can always create a Pull Request to contribute to the RandomStack projects.
-See [this](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) guide for more information.  
+See [this](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) guide for more information.
+
+### Contributors
+In your commit log message reference the related issue by typing the issue hashtag. When committing, always be sure to run an update before you commit.
+If there is a conflict between the latest revision and your patch after the update, then it is your responsibility to track down the update that caused the conflict and determine the issue (and fix it).
+If your code is committed and it introduces new functionality, please edit the wiki accordingly. We can easily roll back to previous revisions, so just do your best; point us to it and we’ll see if it sticks!
+
+### Code Quality
+We generally abide by the standard Java Code Conventions. Besides that, just make an effort to write elegant code that:
+
+- has comments and javadoc
+- handles errors gracefully
+- has consistent naming conventions.
+- compiles (or runs if interpreted) without warnings.  
