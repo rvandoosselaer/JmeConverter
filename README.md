@@ -46,7 +46,7 @@ If you have a bug or an idea, browse the open [issues](https://github.com/random
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
-This project is licensed under the BSD 3-Clause License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgements
 - Icon made by Freepik from www.flaticon.com
