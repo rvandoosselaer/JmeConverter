@@ -3,7 +3,7 @@ Configuration:
     Console:
       name: STDOUT
       PatternLayout:
-        Pattern: "%d %-5p [%t] %C:%L - %m%n"
+        Pattern: "%d %-5p %m%n"
 
   Loggers:
     logger:
