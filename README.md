@@ -1,6 +1,8 @@
 # ![JmeConverter](icon-64.png) JmeConverter
 A utility to convert JME3-compatible models to the jMonkeyEngine binary j3o format.
 
+[![Build Status](https://travis-ci.com/randomstack/JmeConverter.svg?branch=master)](https://travis-ci.com/randomstack/JmeConverter)
+
 ## Documentation
 General documentation can be found on the [wiki.](https://github.com/randomstack/JmeConverter/wiki)
 The javadoc can be found at the [gh-pages.](https://randomstack.github.io/JmeConverter/javadoc/org/randomstack/jmeconverter/Converter.html)
