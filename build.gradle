@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'idea'
     id 'application'
+    id 'maven-publish'
 }
 
 group = "org.randomstack"
@@ -57,6 +58,7 @@ application {
     applicationName = "jmeconverter"
 }
 
+// create a properties file with the version in
 task createProperties(dependsOn: processResources) {
     doLast {
         new File("$buildDir/resources/main/version.properties").withWriter { w ->
@@ -67,6 +69,20 @@ task createProperties(dependsOn: processResources) {
     }
 }
 
+// copy the generated javadocs into the /docs folder for the github pages
+task copyJavadoc(dependsOn: javadoc) {
+    doLast {
+        copy {
+            from "$buildDir/docs"
+            into "$projectDir/docs"
+        }
+    }
+}
+
 classes {
     dependsOn createProperties
+}
+
+build {
+    dependsOn copyJavadoc
 }
