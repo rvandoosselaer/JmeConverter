@@ -8,7 +8,7 @@ Configuration:
   Loggers:
     logger:
       - name: org.randomstack
-        level: all
+        level: info
     Root:
       level: warn
       AppenderRef:

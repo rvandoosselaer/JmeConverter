@@ -26,19 +26,16 @@ Maven snippet:
 
 The repository should be added to your build file. Instructions can be found [here.](https://bintray.com/randomstack/RandomStack/JmeConverter)
 
-## Building
-This library uses [gradle](https://gradle.org) as build system, and comes with the gradle wrapper included. So no prior installation on your computer is required!
-You can just use the `gradlew` or `gradlew.bat` executables in the root of the sources.
+## Usage
+Download the latest release from the [releases](https://github.com/randomstack/JmeConverter/releases) page and unpack the archive.
 
-To run a full build, use:
+Inside the bin folder, you can find the `jmeconverter` and `jmeconverter.bat` executables.
+
 ```bash
-$ ./gradlew build
+$ jmeconverter.bat C:\Downloads\MyModel\model.blend
 ```
 
-To get an overview of all gradle tasks use:
-```bash
-$ ./gradlew tasks
-```
+The above command will convert the `C:\Downloads\MyModel\model.blend` file to `C:\Downloads\MyModel\model.j3o`. 
 
 ## Contributing
 If you have a bug or an idea, browse the open [issues](https://github.com/randomstack/JmeConverter/issues) before opening a new one.
