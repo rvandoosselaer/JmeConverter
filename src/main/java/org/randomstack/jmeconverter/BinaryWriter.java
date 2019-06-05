@@ -19,7 +19,7 @@ public class BinaryWriter implements Processor {
     
     @Override
     public void process(Model model) {
-        Path output = Paths.get(model.getPath().getParent().toAbsolutePath().toString(), getFileName(model.getPath()));
+        Path output = Paths.get(model.getPath().toAbsolutePath().getParent().toString(), getFileName(model.getPath()));
         try {
             BinaryExporter.getInstance().save(model.getSpatial(), output.toFile());
             log.info("Saving {} to {}", model.getSpatial(), output.toAbsolutePath().toString());

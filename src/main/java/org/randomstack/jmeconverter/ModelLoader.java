@@ -32,7 +32,7 @@ public class ModelLoader {
         validatePath(modelPath);
 
         // add the directory to the assetManager
-        String parentDir = modelPath.getParent().toAbsolutePath().toString();
+        String parentDir = modelPath.toAbsolutePath().getParent().toString();
         assetManager.registerLocator(parentDir, FileLocator.class);
         log.debug("Registered FileLocator[{}] to the asset manager.", parentDir);
 
@@ -45,7 +45,7 @@ public class ModelLoader {
         assetManager.unregisterLocator(parentDir, FileLocator.class);
         log.debug("Unregistered FileLocator[{}] from the asset manager.", parentDir);
 
-        return new Model(modelPath, spatial);
+        return new Model(modelPath.toAbsolutePath(), spatial);
     }
 
     private void validatePath(Path modelPath) {

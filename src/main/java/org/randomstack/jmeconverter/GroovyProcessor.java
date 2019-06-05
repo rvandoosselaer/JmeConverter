@@ -62,7 +62,7 @@ public class GroovyProcessor implements Processor {
         }
         fileName += GROOVY_EXT;
 
-        Path script = Paths.get(modelPath.getParent().toString(), fileName);
+        Path script = Paths.get(modelPath.toAbsolutePath().getParent().toString(), fileName);
 
         return Files.isRegularFile(script) ? script : null;
     }
