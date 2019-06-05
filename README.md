@@ -12,7 +12,7 @@ The library is available on [bintray](https://dl.bintray.com/randomstack/RandomS
 
 Gradle snippet:
 ```gradle
-compile 'org.randomstack:jmeconverter:0.1.0'
+compile 'org.randomstack:jmeconverter:0.1.1'
 ```
 
 Maven snippet:
@@ -20,7 +20,7 @@ Maven snippet:
 <dependency>
   <groupId>org.randomstack</groupId>
   <artifactId>jmeconverter</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 
