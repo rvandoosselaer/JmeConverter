@@ -1,7 +1,8 @@
 package org.randomstack.jmeconverter;
 
 import com.jme3.scene.Spatial;
-import lombok.*;
+import lombok.Data;
+import lombok.NonNull;
 
 import java.nio.file.Path;
 
@@ -10,14 +11,13 @@ import java.nio.file.Path;
  *
  * @author remy
  */
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
+@NonNull
 public class Model {
 
+    @NonNull
     private Path path;
+    @NonNull
     private Spatial spatial;
 
 }

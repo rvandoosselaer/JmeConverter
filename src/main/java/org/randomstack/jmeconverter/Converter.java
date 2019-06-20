@@ -24,6 +24,7 @@ public class Converter {
     private final List<Processor> processors = new ArrayList<>();
 
     public Converter() {
+        processors.add(new AnimationProcessor());
         processors.add(new GroovyProcessor());
         processors.add(new ModelLogger());
         processors.add(new BinaryWriter());

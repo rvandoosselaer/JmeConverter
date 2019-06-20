@@ -16,18 +16,24 @@ import java.nio.file.Paths;
 public class BinaryWriter implements Processor {
 
     public static final String EXTENSION = ".j3o";
-    
+
     @Override
     public void process(Model model) {
         Path output = Paths.get(model.getPath().toAbsolutePath().getParent().toString(), getFileName(model.getPath()));
         try {
             BinaryExporter.getInstance().save(model.getSpatial(), output.toFile());
-            log.info("Saving {} to {}", model.getSpatial(), output.toAbsolutePath().toString());
+            log.info("Saving {}({}) to {}", model.getSpatial().getClass().getSimpleName(), model.getSpatial().getName() == null ? "" : model.getSpatial().getName(), output.toAbsolutePath().toString());
         } catch (IOException e) {
             log.error("Error saving model: {}", e.getMessage(), e);
         }
     }
 
+    /**
+     * Returns the filename for the JME binary model
+     *
+     * @param modelPath the path of the model
+     * @return the filename of the JME binary
+     */
     private String getFileName(Path modelPath) {
         String fileName = modelPath.getFileName().toString();
         if (fileName.contains(".")) {
