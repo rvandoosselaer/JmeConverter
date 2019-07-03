@@ -46,4 +46,4 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgements
-- Icon made by Freepik from www.flaticon.com
+- Icon made by [Freepik](https://www.freepik.com/home) from www.flaticon.com
