@@ -14,7 +14,7 @@ import java.util.logging.LogManager;
 public class Main {
 
     private static final String[] HEADER = {
-            "JmeConverter v" + VersionInfo.getVersion()
+            "JmeConverter v" + VersionHelper.getVersion()
     };
     private static final String[] HELP_TEXT = {
             "Usage: jmeconverter [models]",

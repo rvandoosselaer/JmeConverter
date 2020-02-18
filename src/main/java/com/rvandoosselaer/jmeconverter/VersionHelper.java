@@ -12,13 +12,13 @@ import java.util.Properties;
  * @author rvandoosselaer
  */
 @Slf4j
-public class VersionInfo {
+public class VersionHelper {
 
     private static final String VERSION_FILE = "/version.properties";
     private static final Properties PROPERTIES = new Properties();
 
     static {
-        try (InputStream in = VersionInfo.class.getResourceAsStream(VERSION_FILE)) {
+        try (InputStream in = VersionHelper.class.getResourceAsStream(VERSION_FILE)) {
             PROPERTIES.load(in);
         } catch (IOException | NullPointerException e) {
             log.warn("File not found: {}", VERSION_FILE);
