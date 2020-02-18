@@ -12,6 +12,8 @@ Download the latest release from the [releases](https://github.com/rvandoosselae
 
 Inside the bin folder, you can find the `jmeconverter` and `jmeconverter.bat` executables.
 
+Run the executable with a model path parameter.
+
 ```bash
 $ jmeconverter.bat C:\Downloads\MyModel\model.blend
 ```
