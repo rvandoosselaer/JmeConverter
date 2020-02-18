@@ -7,7 +7,7 @@ Configuration:
 
   Loggers:
     logger:
-      - name: org.randomstack
+      - name: com.rvandoosselaer
         level: info
     Root:
       level: warn
