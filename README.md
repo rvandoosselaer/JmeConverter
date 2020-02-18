@@ -1,7 +1,7 @@
 # ![JmeConverter](icon-64.png) JmeConverter
 A utility to convert JME3-compatible models to the jMonkeyEngine binary j3o format.
 
-[![Build Status](https://travis-ci.com/randomstack/JmeConverter.svg?branch=master)](https://travis-ci.com/randomstack/JmeConverter)
+[![Build Status](https://travis-ci.com/rvandoosselaer/JmeConverter.svg?branch=master)](https://travis-ci.com/rvandoosselaer/JmeConverter) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9266e68729a447e2b8b0630468e914be)](https://www.codacy.com/manual/rvandoosselaer/JmeConverter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rvandoosselaer/JmeConverter&amp;utm_campaign=Badge_Grade)
 
 ## Documentation
 General documentation can be found on the [wiki.](https://github.com/rvandoosselaer/JmeConverter/wiki)
