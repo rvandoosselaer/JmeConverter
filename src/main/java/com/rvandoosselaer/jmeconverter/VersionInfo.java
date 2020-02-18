@@ -1,4 +1,4 @@
-package org.randomstack.jmeconverter;
+package com.rvandoosselaer.jmeconverter;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -9,7 +9,7 @@ import java.util.Properties;
 /**
  * Loads the version.properties file that is generated during the gradle build process and exposes version information.
  *
- * @author remy
+ * @author rvandoosselaer
  */
 @Slf4j
 public class VersionInfo {

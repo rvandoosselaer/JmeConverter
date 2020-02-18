@@ -1,4 +1,4 @@
-package org.randomstack.jmeconverter;
+package com.rvandoosselaer.jmeconverter;
 
 import com.jme3.export.binary.BinaryExporter;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 /**
  * A processor implementation that saves the converted model as a JME binary (.j3o) next to the original model file.
  *
- * @author remy
+ * @author rvandoosselaer
  */
 @Slf4j
 public class BinaryWriter implements Processor {
@@ -20,6 +20,11 @@ public class BinaryWriter implements Processor {
     @Override
     public void process(Model model) {
         Path output = Paths.get(model.getPath().toAbsolutePath().getParent().toString(), getFileName(model.getPath()));
+
+        saveModel(model, output);
+    }
+
+    private void saveModel(Model model, Path output) {
         try {
             BinaryExporter.getInstance().save(model.getSpatial(), output.toFile());
             log.info("Saving {}({}) to {}", model.getSpatial().getClass().getSimpleName(), model.getSpatial().getName() == null ? "" : model.getSpatial().getName(), output.toAbsolutePath().toString());

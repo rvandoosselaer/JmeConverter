@@ -1,4 +1,4 @@
-package org.randomstack.jmeconverter;
+package com.rvandoosselaer.jmeconverter;
 
 import com.jme3.asset.AssetManager;
 import com.jme3.asset.DesktopAssetManager;
@@ -13,7 +13,7 @@ import java.nio.file.Path;
  * Class loading the model using JME's {@link AssetManager}.
  * The loaded {@link Spatial} is wrapped and returned in a {@link Model}
  *
- * @author remy
+ * @author rvandoosselaer
  */
 @Slf4j
 public class ModelLoader {

@@ -1,4 +1,4 @@
-package org.randomstack.jmeconverter;
+package com.rvandoosselaer.jmeconverter;
 
 import com.jme3.material.MatParam;
 import com.jme3.material.Material;
@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * A processor implementation that logs the structure of the model to the configured logger.
  *
- * @author remy
+ * @author rvandoosselaer
  */
 @Slf4j
 public class ModelLogger implements Processor {

@@ -1,4 +1,4 @@
-package org.randomstack.jmeconverter;
+package com.rvandoosselaer.jmeconverter;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -8,14 +8,14 @@ import java.util.List;
 
 /**
  * The main starting point of the converter. First the model is loaded using the {@link ModelLoader}. The resulting
- * {@link Model} is then processed by the configured {@link Processor} list. The processors are executed in the order in
- * which they have been added to the list.
+ * {@link Model} is then processed by the configured list of {@link Processor}. The processors are executed in the order
+ * in which they have been added to the list.
  * The order of the processor list can be adapted by invoking the {@link #addProcessor(int, Processor)}, {@link #removeProcessor(Processor)}
  * and {@link #clearProcessors()} methods.
  * Make sure that processors that modify the model are processed before the {@link BinaryWriter} processor is invoked.
  * Changes made to the model after the {@link BinaryWriter} is invoked will not be stored.
  *
- * @author remy
+ * @author rvandoosselaer
  */
 @Slf4j
 public class Converter {

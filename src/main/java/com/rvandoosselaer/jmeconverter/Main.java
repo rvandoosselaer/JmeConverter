@@ -1,4 +1,4 @@
-package org.randomstack.jmeconverter;
+package com.rvandoosselaer.jmeconverter;
 
 import org.slf4j.bridge.SLF4JBridgeHandler;
 
@@ -9,7 +9,7 @@ import java.util.logging.LogManager;
 /**
  * Starts the converter application and converts the models that are passed as program arguments.
  *
- * @author remy
+ * @author rvandoosselaer
  */
 public class Main {
 
@@ -22,10 +22,7 @@ public class Main {
     };
 
     public static void main(String[] args) {
-        // send jul to slf4j
-        LogManager.getLogManager().getLogger("").setLevel(Level.ALL);
-        SLF4JBridgeHandler.removeHandlersForRootLogger();
-        SLF4JBridgeHandler.install();
+        configureLogging();
 
         print(HEADER);
 
@@ -38,6 +35,13 @@ public class Main {
         for (String arg : args) {
             converter.convert(Paths.get(arg));
         }
+    }
+
+    private static void configureLogging() {
+        // send jul to slf4j
+        LogManager.getLogManager().getLogger("").setLevel(Level.ALL);
+        SLF4JBridgeHandler.removeHandlersForRootLogger();
+        SLF4JBridgeHandler.install();
     }
 
     private static void print(String... lines) {
