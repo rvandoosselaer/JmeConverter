@@ -14,7 +14,14 @@ import java.util.logging.LogManager;
 public class Main {
 
     private static final String[] HEADER = {
-            "JmeConverter v" + VersionHelper.getVersion()
+            "      _                 ____                          _            \n" +
+                    "     | |_ __ ___   ___ / ___|___  _ ____   _____ _ __| |_ ___ _ __ \n" +
+                    "  _  | | '_ ` _ \\ / _ \\ |   / _ \\| '_ \\ \\ / / _ \\ '__| __/ _ \\ '__|\n" +
+                    " | |_| | | | | | |  __/ |__| (_) | | | \\ V /  __/ |  | ||  __/ |   \n" +
+                    "  \\___/|_| |_| |_|\\___|\\____\\___/|_| |_|\\_/ \\___|_|   \\__\\___|_|   \n" +
+                    "                                                                   ",
+            "JmeConverter v" + VersionHelper.getVersion(),
+            ""
     };
     private static final String[] HELP_TEXT = {
             "Usage: jmeconverter [models]",
