@@ -22,7 +22,7 @@ The above command will convert the `C:\Downloads\MyModel\model.blend` file to `C
 
 The library is available on [bintray](https://bintray.com/remyvd/rvandoosselaer/jmeconverter) and can be included in your build tool.
 
-Step 1. Add the repository https://dl.bintray.com/remyvd/rvandoosselaer to the list of repositories.
+Step 1. Add the repository `https://dl.bintray.com/remyvd/rvandoosselaer` to the list of repositories.
 
 Step 2. Add the dependency information:
 
@@ -55,4 +55,4 @@ If you have a bug or an idea, you can create a ticket for it [here](https://gith
 This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgements
-- Icon made by [Freepik](https://www.freepik.com/home) from www.flaticon.com
+-   Icon made by [Freepik](https://www.freepik.com/home) from www.flaticon.com
