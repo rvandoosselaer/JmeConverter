@@ -3,10 +3,11 @@ plugins {
     id 'idea'
     id 'application'
     id 'maven-publish'
+    id 'com.jfrog.bintray' version "1.8.4"
 }
 
-group = "org.randomstack"
-version = "0.2.0"
+group = "com.rvandoosselaer"
+version = "1.0.0"
 
 sourceCompatibility = 1.8
 
@@ -22,10 +23,6 @@ ext {
 
 repositories {
     jcenter()
-}
-
-configurations {
-    compile.transitive = false
 }
 
 dependencies {
@@ -54,7 +51,7 @@ dependencies {
 }
 
 application {
-    mainClassName = "org.randomstack.jmeconverter.Main"
+    mainClassName = "com.rvandoosselaer.jmeconverter.Main"
     applicationName = "jmeconverter"
 }
 
@@ -77,6 +74,15 @@ task copyJavadoc(dependsOn: javadoc) {
             into "$projectDir/docs"
         }
     }
+}
+
+// remove the generated javadocs in the /docs folder
+task cleanJavadoc(type: Delete) {
+    delete "$projectDir/docs/javadoc/"
+}
+
+clean {
+    dependsOn cleanJavadoc
 }
 
 classes {
@@ -104,6 +110,22 @@ publishing {
             artifact sourcesJar
             artifact javadocJar
             artifactId 'jmeconverter'
+        }
+    }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_APIKEY')
+    publications = ['MyPublication']
+    pkg {
+        repo = 'rvandoosselaer'
+        name = rootProject.getName()
+        licenses = ['BSD 3-Clause']
+        vcsUrl = 'https://github.com/rvandoosselaer/JmeConverter.git'
+        version {
+            name = '1.0.0'
+            released = new Date()
         }
     }
 }
