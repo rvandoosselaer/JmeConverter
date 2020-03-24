@@ -24,9 +24,9 @@ The above command will convert the `C:\Downloads\MyModel\model.blend` file to `C
 
 The library is available on [bintray](https://bintray.com/remyvd/rvandoosselaer/jmeconverter) and can be included in your build tool.
 
-Step 1. Add the repository `https://dl.bintray.com/remyvd/rvandoosselaer` to the list of repositories.
+**Step 1.** Add the repository `https://dl.bintray.com/remyvd/rvandoosselaer` to the list of repositories.
 
-Step 2. Add the dependency information:
+**Step 2.** Add the dependency information:
 
 group: com.rvandoosselaer
 artifact: jmeconverter
@@ -34,7 +34,7 @@ version: 1.0.0
 
 Check the [releases](https://github.com/rvandoosselaer/JmeConverter/releases) or [bintray](https://bintray.com/remyvd/rvandoosselaer/jmeconverter) pages for available versions.
 
-Step 3. That's it!
+**Step 3.** That's it!
 
 Gradle example:
 
