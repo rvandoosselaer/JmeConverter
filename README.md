@@ -28,9 +28,9 @@ The library is available on [bintray](https://bintray.com/remyvd/rvandoosselaer/
 
 **Step 2.** Add the dependency information:
 
-group: com.rvandoosselaer
-artifact: jmeconverter
-version: 1.0.0
+-   group: com.rvandoosselaer
+-   artifact: jmeconverter
+-   version: 1.0.0
 
 Check the [releases](https://github.com/rvandoosselaer/JmeConverter/releases) or [bintray](https://bintray.com/remyvd/rvandoosselaer/jmeconverter) pages for available versions.
 
