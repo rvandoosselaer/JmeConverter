@@ -40,6 +40,8 @@ public class Main {
     public static void main(String[] args) {
         configureLogging();
 
+        handleOptions(args);
+
         print(HEADER);
 
         if (args.length == 0) {
@@ -48,8 +50,6 @@ public class Main {
         }
 
         Converter converter = new Converter();
-
-        handleOptions(args, converter);
 
         convert(args, converter);
     }
@@ -62,7 +62,7 @@ public class Main {
         }
     }
 
-    private static void handleOptions(String[] args, Converter converter) {
+    private static void handleOptions(String[] args) {
         for (String arg : args) {
             if ("--quiet".equals(arg)) {
                 setQuietMode();
