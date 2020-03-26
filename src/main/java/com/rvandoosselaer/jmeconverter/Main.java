@@ -1,6 +1,5 @@
 package com.rvandoosselaer.jmeconverter;
 
-import org.apache.logging.log4j.core.config.Configurator;
 import org.slf4j.bridge.SLF4JBridgeHandler;
 
 import java.nio.file.Paths;
@@ -72,16 +71,7 @@ public class Main {
     }
 
     private static void setQuietMode() {
-        Configurator.setAllLevels(org.apache.logging.log4j.LogManager.getRootLogger().getName(), org.apache.logging.log4j.Level.ERROR);
-        // above statement does the same, keeping this here for info
-//      LoggerContext ctx = (LoggerContext) org.apache.logging.log4j.LogManager.getContext(false);
-//      Configuration config = ctx.getConfiguration();
-//      config.getLoggers().values().forEach(loggerConfig -> loggerConfig.setLevel(org.apache.logging.log4j.Level.ERROR));
-//      config.getRootLogger().setLevel(org.apache.logging.log4j.Level.ERROR);
-//      ctx.updateLoggers();
-
-        // no good solution, but the easiest way to 'hide' the illegal reflective access warnings
-        System.err.close();
+        System.out.close();
     }
 
     private static void configureLogging() {
@@ -92,9 +82,7 @@ public class Main {
     }
 
     private static void print(String... lines) {
-        for (String line : lines) {
-            System.out.println(line);
-        }
+        Arrays.stream(lines).forEach(System.out::println);
     }
 
 }
