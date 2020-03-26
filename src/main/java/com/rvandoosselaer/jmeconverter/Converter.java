@@ -71,4 +71,21 @@ public class Converter {
         processors.clear();
     }
 
+    /**
+     * Returns the first assignable processor that is an instance of the specified class.
+     *
+     * @param <T>
+     * @param processorClass
+     * @return first processor that is an instance of processorClass, or null if no processor is found
+     */
+    public <T extends Processor> T getProcessor(Class<T> processorClass) {
+        for (Processor processor : processors) {
+            if (processorClass.isAssignableFrom(processor.getClass())) {
+                return (T) processor;
+            }
+        }
+
+        return null;
+    }
+
 }

@@ -1,8 +1,11 @@
 package com.rvandoosselaer.jmeconverter;
 
+import org.apache.logging.log4j.core.config.Configurator;
 import org.slf4j.bridge.SLF4JBridgeHandler;
 
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 
@@ -24,9 +27,16 @@ public class Main {
             ""
     };
     private static final String[] HELP_TEXT = {
-            "Usage: jmeconverter [models]",
-            "Where [models] is a list of jMonkeyEngine compatible model files."
+            "Usage:",
+            "  jmeconverter <model>... [options]",
+            "",
+            "Options:",
+            "  --quiet    Reduce verbosity of the jmeconverter output."
     };
+
+    private static final List<String> OPTIONS = Arrays.asList(
+            "--quiet"
+    );
 
     public static void main(String[] args) {
         configureLogging();
@@ -39,9 +49,39 @@ public class Main {
         }
 
         Converter converter = new Converter();
+
+        handleOptions(args, converter);
+
+        convert(args, converter);
+    }
+
+    private static void convert(String[] args, Converter converter) {
         for (String arg : args) {
-            converter.convert(Paths.get(arg));
+            if (!OPTIONS.contains(arg)) {
+                converter.convert(Paths.get(arg));
+            }
         }
+    }
+
+    private static void handleOptions(String[] args, Converter converter) {
+        for (String arg : args) {
+            if ("--quiet".equals(arg)) {
+                setQuietMode();
+            }
+        }
+    }
+
+    private static void setQuietMode() {
+        Configurator.setAllLevels(org.apache.logging.log4j.LogManager.getRootLogger().getName(), org.apache.logging.log4j.Level.ERROR);
+        // above statement does the same, keeping this here for info
+//      LoggerContext ctx = (LoggerContext) org.apache.logging.log4j.LogManager.getContext(false);
+//      Configuration config = ctx.getConfiguration();
+//      config.getLoggers().values().forEach(loggerConfig -> loggerConfig.setLevel(org.apache.logging.log4j.Level.ERROR));
+//      config.getRootLogger().setLevel(org.apache.logging.log4j.Level.ERROR);
+//      ctx.updateLoggers();
+
+        // no good solution, but the easiest way to 'hide' the illegal reflective access warnings
+        System.err.close();
     }
 
     private static void configureLogging() {
