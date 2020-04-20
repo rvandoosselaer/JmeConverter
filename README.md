@@ -5,7 +5,7 @@ A utility to convert JME3-compatible models to the jMonkeyEngine binary j3o form
 
 ## Documentation
 General documentation can be found on the [wiki.](https://github.com/rvandoosselaer/JmeConverter/wiki)
-The javadoc can be found at the [gh-pages.](https://rvandoosselaer.github.io/JmeConverter/1.0.0/javadoc/)
+The javadoc can be found at the [gh-pages.](https://rvandoosselaer.github.io/JmeConverter/1.1.0/javadoc/)
 
 ## CLI tool usage
 Download the latest release from the [releases](https://github.com/rvandoosselaer/JmeConverter/releases) page and unpack the archive.
@@ -46,7 +46,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.rvandoosselaer:jmeconverter:1.0.0'
+    compile 'com.rvandoosselaer:jmeconverter:1.1.0'
 }
 ``` 
 
