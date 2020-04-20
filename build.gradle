@@ -7,18 +7,17 @@ plugins {
 }
 
 group = "com.rvandoosselaer"
-version = "1.0.0"
+version = "1.1.0"
 
 sourceCompatibility = 1.8
 
 ext {
-    jmeVersion = "[3.2,)"
+    jmeVersion = "[3.3,)"
     lombokVersion = "[1.18,)"
     slf4jVersion = "[1.8,)"
-    log4j2Version = "[2.11,)"
-    jacksonVersion = "[2.9,)"
-    jme3UtilsVersion = "[0.1,)"
-    groovyVersion = "[2.4,)"
+    log4j2Version = "[2.13,)"
+    jacksonVersion = "[2.10,)"
+    groovyVersion = "[3.0,)"
 }
 
 repositories {
@@ -124,7 +123,7 @@ bintray {
         licenses = ['BSD 3-Clause']
         vcsUrl = 'https://github.com/rvandoosselaer/JmeConverter.git'
         version {
-            name = '1.0.0'
+            name = '1.1.0'
             released = new Date()
         }
     }
